@@ -1,0 +1,9 @@
+System.out.print와 BufferedWriter의 속도차이는 무시를 못한다.
+시간복잡도 관련한 문제에서 시간초과가 발생한다면 평소에 쓰던 System.out.print말고 BufferedWriter를 사용해보는걸 생각해보자
+
+Linkedlist에서 쌍방향 검색을 하기 위해선 ListIterator를 사용하자
+사용할때 앞의 인자가 있는지 확인하는 방법은 .hasNext()이고 인자의 다음으로 옮겨가는 방법은 .next()이다
+마찬가지고 뒤로 가는 경우는 .hasPrevious()이며 옮겨가는 방법은 .previous()이다
+
+
+참고로 BufferedWriter를 사용했을 경우 마지막에 .flush()와 .close()를 사용하는걸 잊지말자.
