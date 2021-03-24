@@ -3,7 +3,7 @@ package Q_10799;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Stack;
-
+//한글깨지는지 확인
 //쇠막대기 with Stack
 public class Main {
 	public static void main(String args[]) throws Exception {
