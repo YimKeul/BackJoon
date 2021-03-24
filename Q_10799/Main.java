@@ -17,16 +17,18 @@ public class Main {
 				stack.push(i);
 			}else {
 				if(stack.peek() == i-1) {
-					System.out.println("ss"+stack.peek());
+					//System.out.println("ss"+stack.peek());
 					stack.pop();
 					count+=stack.size();
 				}else {
-					System.out.println("dd"+stack.peek());
+					//System.out.println("dd"+stack.peek());
 					stack.pop();
 					count++;
+					
+					
 				}
 			}
-			System.out.println("test  i : "  + (i+1) + " test : " + s.charAt(i)+ " " + "test count : " +count);
+			//System.out.println("test  i : "  + (i+1) + " test : " + s.charAt(i)+ " " + "test count : " +count);
 		}
 		System.out.println(count);
 	}
