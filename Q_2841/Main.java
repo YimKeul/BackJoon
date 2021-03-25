@@ -38,6 +38,7 @@ public class Main {
 				stack[line].push(plet);
 				result++;
 			}
+		
 			
 		}
 		System.out.println(result);
