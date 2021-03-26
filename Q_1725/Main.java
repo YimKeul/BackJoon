@@ -20,7 +20,7 @@ public class Main {
 		}
 		stack.push(0); //ÃÊ±âÈ­
 
-		for(int i = 1 ; i<=n;i++) {
+		for(int i = 1 ; i<=n+1;i++) {
 		
 			while(!stack.isEmpty() && array[stack.peek()] > array[i]) {
 				int height = array[stack.peek()];
