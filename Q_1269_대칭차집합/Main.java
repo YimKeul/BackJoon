@@ -33,12 +33,12 @@ public class Main {
 		clone_a.addAll(set_a);
 		clone_a.removeAll(set_b);
 		int size_a = clone_a.size();
-		System.out.println(size_a);
+		//System.out.println(size_a);
 		Set<Integer> clone_b = new HashSet<Integer>();
 		clone_b.addAll(set_b);
 		clone_b.removeAll(set_a);
 		int size_b = clone_b.size();
-		System.out.println(size_b);
+		//System.out.println(size_b);
 		int answer = size_a + size_b;
 		System.out.println(answer);
 		
