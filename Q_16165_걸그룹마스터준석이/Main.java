@@ -4,95 +4,78 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class Main {
 	public static void main(String args[]) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String input [] = br.readLine().split(" ");
+		String input[] = br.readLine().split(" ");
 		int n = Integer.parseInt(input[0]);
-		
+
 		int m = Integer.parseInt(input[1]);
-		
-		Map<String, Map> map = new TreeMap<String,Map>();
-		
-		while(n-->0) {
+
+		Map<String, Set<String>> map = new TreeMap<String, Set<String>>();
+
+		// 입력
+		while (n-- > 0) {
 			String group = br.readLine();
 			int member = Integer.parseInt(br.readLine());
-			Map<String, Integer> g = new TreeMap<String, Integer>();
-			
-			for(int i = 0; i< member; i++) {
-				String name  = br.readLine();
-				g.put(name, i);
+			Set<String> set = new TreeSet<String>();
+			for (int i = 0; i < member; i++) {
+				String name = br.readLine();
+				set.add(name);
 			}
-			map.put(group, g);
+			if (!map.containsKey(group)) {
+				map.put(group, set);
+			}
 		}
-	
 		System.out.println();
-//		for(String s : map.keySet()) {
-//			System.out.println(s + " : " + map.get(s) + " : " + map.get(s).keySet());
-//		}
-	
-
-		
-		
-		
-//		Iterator iter = map.keySet().iterator();
+//		System.out.println("------ test ------");
+//		for(String s  : map.keySet()) {
+//			System.out.println(s + " : " + map.get(s));
+//			System.out.println(map.get(s));
+//			Iterator iter = map.get(s).iterator();
+//			
+//			if(map.containsKey(s)) {
+//				System.out.println("조건containsKey");
+//				while(iter.hasNext()) {
+//					System.out.println(iter.next());
+//				}	
+//			}
+//			
+//			if(map.get(s).contains("sana")) {
+//				System.out.println("asdfadsf");
+//			}
 //		
-//		while(iter.hasNext()) {
-//			System.out.println(iter.next());
 //		}
-		
-		
-		
-		for(Map.Entry<String, Map> tt : map.entrySet()) {
-			
-			System.out.println(tt.getKey() +" : "+tt.getValue().keySet());
-			Iterator ii = tt.getValue().keySet().iterator();
-			while(ii.hasNext()) {
-				System.out.println(ii.next());
-			}
-		}
-		
-		System.out.println("---------------------");
-		
-		
-		
-		System.out.println(map.get("twice").containsValue("sana"));
-		
-		
-		Iterator<Map.Entry<String, Map>> iterE = map.entrySet().iterator();
-		while(iterE.hasNext()) {
-			Map.Entry<String, Map> entry = iterE.next();
-			String ky = entry.getKey();
-			Map v = entry.getValue();
-			
-			System.out.println(ky + " : " + v);
-		}
-		
-		while(m-->0) {
-		
+
+		// 질문
+		while (m-- > 0) {
 			String quiz = br.readLine();
 			int type = Integer.parseInt(br.readLine());
-			if(type == 1) {
-				
-				
-				for(Map.Entry<String, Map> tt : map.entrySet()) {
-					
-					//System.out.println(tt.getKey() +" : "+tt.getValue().keySet());
-					
-					//map의 key의 value인 <map>의 key 출력
-					Iterator ii = tt.getValue().keySet().iterator();
-					while(ii.hasNext()) {
-						//System.out.println(ii.next());
+			if (type == 1) { // 이름이 들어가면 그룹을 출력
+
+				for (String s : map.keySet()) {
+					Iterator iter = map.get(s).iterator();
+					if (map.get(s).contains(quiz)) {
+						System.out.println(s);
 					}
+
 				}
-			
-			}else {
-				
-				
+			} else {// 그룹이 입력되면 멤버 출력
+				for (String s : map.keySet()) {
+					if (s.equals(quiz)) {
+						Iterator iter = map.get(s).iterator();
+						while (iter.hasNext()) {
+							System.out.println(iter.next());
+						}
+					}
+
+				}
 			}
 		}
-		
+
 	}
 }
