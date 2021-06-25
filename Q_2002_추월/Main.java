@@ -36,10 +36,10 @@ public class Main {
 		}
 		
 		for(String s : map.keySet()) {
-			System.out.println(s + " : " + map.get(s));
+			//.out.println(s + " : " + map.get(s));
 		}
 		for(int i = 0; i< n; i++) {
-			System.out.println(out[i]);
+			//System.out.println(out[i]);
 		}
 		System.out.println(ans);
 		

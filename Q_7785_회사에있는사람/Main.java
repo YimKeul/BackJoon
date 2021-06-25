@@ -30,7 +30,12 @@ public class Main {
 		}
 
 		List<String> list = new LinkedList<String>(member);
-
+//		Collections.reverse(list);
+//		Iterator iter_1 = list.iterator();
+//		while(iter_1.hasNext()) {
+//			System.out.println(iter_1.next());
+//		}
+		
 		Collections.sort(list);
 		ListIterator iter = list.listIterator(list.size());
 

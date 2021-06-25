@@ -31,26 +31,6 @@ public class Main {
 				map.put(group, set);
 			}
 		}
-		System.out.println();
-//		System.out.println("------ test ------");
-//		for(String s  : map.keySet()) {
-//			System.out.println(s + " : " + map.get(s));
-//			System.out.println(map.get(s));
-//			Iterator iter = map.get(s).iterator();
-//			
-//			if(map.containsKey(s)) {
-//				System.out.println("조건containsKey");
-//				while(iter.hasNext()) {
-//					System.out.println(iter.next());
-//				}	
-//			}
-//			
-//			if(map.get(s).contains("sana")) {
-//				System.out.println("asdfadsf");
-//			}
-//		
-//		}
-
 		// 질문
 		while (m-- > 0) {
 			String quiz = br.readLine();

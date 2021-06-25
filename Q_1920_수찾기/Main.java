@@ -1,4 +1,4 @@
-package Q_1920;
+package Q_1920_수찾기;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -34,7 +34,7 @@ public class Main {
 		for(int i =0; i < m; i++) {
 		//분명 base랑 sample.toString은 같은 값인데..
 //								base.toString자리에 sample.toString들어가면 시간초과
-			if (input.charAt(i) == base.toString().charAt(len)) {
+			if (input.charAt(i) == base.charAt(len)) {
 				
 				len+=1;
 			}else {

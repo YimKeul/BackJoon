@@ -19,7 +19,7 @@ public class Main {
 			
 			time[i][0] = s;
 			time[i][1] = e;
-		}
+		}				
 		
 		
 		Arrays.sort(time, new Comparator<int[]>() {

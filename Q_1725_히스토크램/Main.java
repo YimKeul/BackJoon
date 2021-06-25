@@ -1,4 +1,4 @@
-package Q_1725;
+package Q_1725_히스토크램;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -18,19 +18,19 @@ public class Main {
 		for(int i = 1; i <= n; i++) {
 			array[i] = Integer.parseInt(br.readLine());
 		}
-		stack.push(0); //�ʱ�ȭ
+		stack.push(0); //�ʱ�ȭ
 
 		for(int i = 1 ; i<=n+1;i++) {
 		
 			while(!stack.isEmpty() && array[stack.peek()] > array[i]) {
 				int height = array[stack.peek()];
-				stack.pop();
-				//System.out.println("test " + i + "  stack.peek : " + stack.peek());
+				int z = stack.pop();
+				System.out.println("test " + i + "  stack.peek : " + stack.peek());
 				int width = i - stack.peek() -1;
 				answer = Math.max(answer, width*height);
 			}
-			stack.push(i);
-			
+			int a = stack.push(i);
+			System.out.println("for test i : " + i + " push test : " + a );
 		}
 		System.out.println(answer);
 

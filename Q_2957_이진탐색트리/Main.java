@@ -18,8 +18,8 @@ public class Main {
         
         for(int i = 0; i < n; i++) {
             int number = Integer.parseInt(br.readLine());
-            System.out.println("lower : "+set.lower(number));
-            System.out.println("higher : "+set.higher(number));
+//            System.out.println("lower : "+set.lower(number));
+//            System.out.println("higher : "+set.higher(number));
             
             depth[number] = Math.max(depth[set.lower(number)], depth[set.higher(number)]) + 1;
             set.add(number);
@@ -29,3 +29,33 @@ public class Main {
         System.out.println(sb.toString());
     }
 }
+/*
+8
+
+3
+5
+1
+6
+8
+7
+2
+4
+ 
+ 
+0
+1
+2
+4
+7
+11
+13
+15
+ 
+  */
+
+/*
+2 1 2 1 2
+1 1 2 2 3 
+
+2 2 2 1 1
+*/

@@ -2,7 +2,6 @@ package Q_6236_용돈관리;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Main {
 	public static void main(String args[]) throws Exception {
@@ -22,7 +21,7 @@ public class Main {
 			min = arr[i] > min ? arr[i] : min;
 		}
 		
-		Arrays.sort(arr);
+//		Arrays.sort(arr);
 //		System.out.println(arr[n-1]);
 //		System.out.println(max);
 //		

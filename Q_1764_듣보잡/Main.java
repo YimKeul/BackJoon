@@ -28,8 +28,7 @@ public class Main {
 		x_man.addAll(no_listen);
 		x_man.retainAll(no_look);
 		System.out.println(x_man.size());
-//		System.out.println(x_man);
-//		
+
 		Iterator iter = x_man.iterator();
 		while(iter.hasNext()) {
 			System.out.println(iter.next());

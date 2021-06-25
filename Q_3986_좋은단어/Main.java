@@ -1,4 +1,4 @@
-package Q_3986;
+package Q_3986_좋은단어;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

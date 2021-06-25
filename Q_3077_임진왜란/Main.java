@@ -20,17 +20,13 @@ public class Main {
 
 	String input_answer [] = br.readLine().split(" ");
 
-//	Map<String,Integer> a_map = new HashMap<String, Integer>();
-//	
-//	for(int i = 0; i < n; i++) {
-//		a_map.put(input_answer[i], i+1);
-//	}
-//	
 	int cnt = 0;
 	
 	for(int i = 0; i < n-1;i++) {
 		for(int j = i+1;j<n;j++) {
 			if(q_map.get(input_answer[i]) < q_map.get(input_answer[j]) ) {
+				System.out.println(input_answer[i] + " < " + input_answer[j]);
+				System.out.println(q_map.get(input_answer[i]) +" "+ q_map.get(input_answer[j]) );
 				cnt++;
 			}
 		}

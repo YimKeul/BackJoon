@@ -37,7 +37,7 @@ public class Main {
 			if(isSurprise) {
 				sb.append(input).append(" is surprising.");
 			}else {
-				sb.append(input).append(" is Not surprising.");
+				sb.append(input).append(" is NOT surprising.");
 			}
 			sb.append("\n");
 		}

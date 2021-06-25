@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.HashMap;
+// 내 코드는 시간초과
 
 public class Main {
 	public static void main(String args[]) throws Exception {
@@ -20,11 +21,7 @@ public class Main {
 		String name_arr[] = new String [n+1];
 		for (int i = 0; i < n; i++) {
 			String name = br.readLine();
-//			if (map.containsKey(name)) {
-//				map.put(name, map.get(name) + 1);
-//			} else {
-//				map.put(name, i + 1);
-//			}
+
 			map.put(name, i + 1);
 			name_arr[i+1] = name;
 		}
@@ -36,13 +33,7 @@ public class Main {
 			if (map.containsKey(quiz)) {
 				sb.append(map.get(quiz)).append("\n");
 			} else {
-		//		if (map.containsValue(Integer.parseInt(quiz))) {
-//					if (map.containsValue(Integer.parseInt(quiz))) {
-//						sb.append(getKey(map, Integer.parseInt(quiz))).append("\n");
-//					}
-					sb.append(name_arr[i+1]).append("\n");
-	//			}
-				
+					sb.append(name_arr[i+1]).append("\n");	
 				
 			}
 
@@ -54,19 +45,11 @@ public class Main {
 
 	}
 
-//	private static <K, V> K getKey(HashMap<K, V> map, V value) {
-//		for (K key : map.keySet()) {
-//			if (value.equals(map.get(key))) {
-//				return key;
-//			}
-//		}
-//		return null;
-//	}
 }
 
 
 /* 테스트케이스
- 26 5
+26 5
 Bulbasaur
 Ivysaur
 Venusaur
@@ -98,5 +81,6 @@ Raichu
 3
 Pidgey
 Kakuna
+
  * */
  

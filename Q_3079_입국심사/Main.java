@@ -34,32 +34,61 @@ public class Main {
 	}
 
 	private static void getMinTime(int n, int m) {
-		long left = 0;
+		long left = 1;
 		long right = maxHigh*m;
+		int arr[] = new int[(int)right];
+		for(int i = 0; i< n ; i++) {
+			arr[gate[i]] = gate[i];
+		}
+		
 		
 		while(left <= right) {
 			long mid = (left+right)/2;
 			long sum = 0;
 			
 			for(int idx : gate) {
-				long count = mid/idx;
+				
+			
+				long count = (mid/idx);
+			
+				
+//				if(min/(idx*10)>0) {
+//					System.out.println("arr[idx] 값 : "+arr[idx]);
+//					System.out.println("쉰다~~~");
+//					min+= idx;
+//					continue;
+//				}else {
+//					if(sum >= m) {
+//						break;
+//					}
+//					sum+=count;	
+//				}
+				
+				
+				if((mid/idx)/10 >=1	) {
+					count -= (mid/idx)/10;
+				}
 				
 				if(sum >= m) {
 					break;
 				}
-				sum+=count;
+				
+				sum+=count;	
 			}
 			
 			
 			
 			
 			if(sum >=m) {
-//				System.out.println(mid + ", " + sum);
+			
 				min = Math.min(min, mid);
 				right = mid-1;
+				
 			}else {
 				left = mid +1;
+				
 			}
+			
 			
 			
 		}

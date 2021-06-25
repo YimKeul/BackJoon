@@ -9,7 +9,8 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String input [] = br.readLine().split(" ");
 		int melody = Integer.parseInt(input[0]);
-		int total_plet = Integer.parseInt(input[1]); 
+		//int total_plet = Integer.parseInt(input[1]); 
+		
 		//현 코드에는 의미는 없지만 의미부여하면 plet은 total_plet을 넘을 수 없다. (이건 구현 안함) 
 		//구현한다면 line25~for문에서 if(plet < total_plet){}을 걸면 된다.
 		

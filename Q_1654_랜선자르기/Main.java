@@ -30,7 +30,7 @@ public class Main {
 			
 			for (int i = 0; i < k; i++) {
 				count += (arr[i] / middle);
-				System.out.println(count);
+				//System.out.println(count);
 			}
 			if (count >= n) {
 				min = middle + 1;

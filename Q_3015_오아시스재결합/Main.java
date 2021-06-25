@@ -1,4 +1,4 @@
-package Q_3015;
+package Q_3015_오아시스재결합;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -60,11 +60,11 @@ public class Main {
 					break;
 				}
 			}
-
+			////////////////////////////
 			if (!stack.isEmpty()) {
 				count += 1L;
 			}
-
+			////////////////////////////
 			stack.push(array[i]);
 			st_num.push(temp);
 

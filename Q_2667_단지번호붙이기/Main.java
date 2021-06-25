@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
-
+//dfs
 public class Main {
 	static int n;
 	static int dx[]  = {1,0,-1,0};

@@ -1,10 +1,10 @@
-package Q_10799;
+package Q_10799_ì‡ ë§‰ëŒ€ê¸°;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Stack;
-//ÇÑ±Û±úÁö´ÂÁö È®ÀÎ
-//¼è¸·´ë±â with Stack
+//ï¿½Ñ±Û±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
+//ï¿½è¸·ï¿½ï¿½ï¿½ with Stack
 public class Main {
 	public static void main(String args[]) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

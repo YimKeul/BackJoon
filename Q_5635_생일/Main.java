@@ -53,8 +53,8 @@ public class Main {
 				return o1.year - o2.year; // 나이 오름차순
 			}
 		});
-		
-		System.out.println(list.get(0).name);
 		System.out.println(list.get(list.size()-1).name);
+		System.out.println(list.get(0).name);
+
 	}
 }

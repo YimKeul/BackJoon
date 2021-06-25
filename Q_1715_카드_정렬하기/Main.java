@@ -13,6 +13,7 @@ public class Main {
 		
 		for(int i =0; i< n;i++) {
 			pq.add(Long.parseLong(br.readLine()));
+	
 		}
 		
 		long num =0;
@@ -26,3 +27,10 @@ public class Main {
 		System.out.println(num);
 	}
 }
+/*
+ 3
+10
+20
+40 
+ */
+ 

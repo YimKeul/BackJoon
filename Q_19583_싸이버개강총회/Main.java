@@ -3,7 +3,6 @@ package Q_19583_싸이버개강총회;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 
@@ -43,10 +42,7 @@ public class Main {
 		answer.retainAll(out);
 		
 		System.out.println(answer.size());
-		Iterator iter = answer.iterator();
-		while(iter.hasNext()) {
-			System.out.println(iter.next());
-		}
+
 		
 		
 	}

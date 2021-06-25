@@ -1,24 +1,23 @@
 package Q_18258;
 
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class Main {
-	public static void main(String args[]) {
+	public static void main(String args[]) throws Exception{
 		
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		sc.nextLine();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	
+		int n = Integer.parseInt(br.readLine());
+		Deque<Integer> q = new LinkedList<>();
 		
-		
-		Queue q = new LinkedList();
-		int x;
-		int last = 0;
 		for(int i =0; i<n;i++) {
-			String str = sc.nextLine();
+			String str []= br.readLine().split(" "); 
+			String control = str[0];
 			
-			String instruction[] = str.split(" ");
-			
-			switch(instruction[0]) {
+			switch(control) {
 			case "pop":
 				if(q.isEmpty()) {
 					System.out.println("-1");
@@ -27,8 +26,8 @@ public class Main {
 				}
 				break;
 			case "push":
-				x = Integer.parseInt(instruction[1]);
-				last = x;
+				int x = Integer.parseInt(str[1]);
+				
 				q.offer(x);
 				break;
 				
@@ -57,7 +56,7 @@ public class Main {
 					System.out.println("-1");
 				}
 				else {
-					System.out.println(last);
+					System.out.println(q.peekLast());
 				}
 				break;
 			}
